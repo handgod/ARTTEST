@@ -471,10 +471,10 @@ exit:
 	return ret;
 }
 int main(int argc, char** argv) {
-//	char *pn = "com.example.testar";
+	char *pn = "com.example.testar";
 	char *is = "/data/local/libso.so";
 //	char *pn = "system_server";
-	char *pn = "/system/bin/surfaceflinger";
+//	char *pn = "/system/bin/surfaceflinger";
 //	char *is = "/data/local/libTest.so";
 
 	printf("%s\n",pn);

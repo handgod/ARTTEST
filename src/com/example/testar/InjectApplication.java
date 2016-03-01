@@ -14,7 +14,7 @@ public class InjectApplication extends Application {
 	@Override
 	public void onCreate() {
 		// TODO Auto-generated method stub
-		test();
+		Log.d("wqm", test());
 		super.onCreate();
 	}
 

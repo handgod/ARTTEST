@@ -35,6 +35,7 @@ public class MainActivity extends Activity {
 				// System.out.println("Wifi mac :" + info.getMacAddress());
 				// System.out.println("return " + test());
 				InjectApplication ia = (InjectApplication) getApplication();
+
 				System.out.println(ia.test());
 			}
 		});
