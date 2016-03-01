@@ -57,6 +57,17 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 
+LOCAL_MODULE    := hello-jni
+
+LOCAL_SRC_FILES	:=	\
+        hello-jni.c \
+        shellcode.s
+
+include $(BUILD_SHARED_LIBRARY)
+#------------------------------------------------------------------------
+
+include $(CLEAR_VARS)
+
 LOCAL_MODULE:= inject
 
 LOCAL_SRC_FILES := inject.c shellcode.s
