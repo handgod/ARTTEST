@@ -225,6 +225,7 @@ bool ClassMethodHook(HookInfo info){
 	}else{
 		HookDalvikMethod(method);
 	}
+	ALOG("LOG","wqm after HookDalvikMethod !");
 
     JNINativeMethod gMethod[] = {
         {info.tMethod, info.tMeihodSig, info.handleFunc},
@@ -236,6 +237,10 @@ bool ClassMethodHook(HookInfo info){
 		if (jenv->RegisterNatives(clazzTarget, gMethod, 1) < 0) {
 			ALOG("RegisterNatives","err");
 			return false;
+		}
+		else
+		{
+			ALOG("LOG","wqm after RegisterNatives !");
 		}
     }
 

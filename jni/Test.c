@@ -18,7 +18,7 @@ JNIEXPORT void JNICALL Java_com_example_testar_InjectClassloader_hookMethodNativ
 JNIEXPORT jstring JNICALL test(JNIEnv *env, jclass clazz)  
 {  
     //__android_log_print(ANDROID_LOG_VERBOSE, "tag", "call <native_printf> in java");
-    return (*env)->NewStringUTF(env,"wqm in test.c haha ");;
+    return (*env)->NewStringUTF(env,"wqm in test.c haha after hook getMacAddress,mac=0x000000");;
 }
 
 HookInfo hookInfos[] = {

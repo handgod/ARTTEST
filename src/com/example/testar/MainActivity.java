@@ -32,11 +32,20 @@ public class MainActivity extends Activity {
 				// TODO Auto-generated method stub
 				WifiManager wifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
 				WifiInfo info = wifi.getConnectionInfo();
-				 System.out.println("wqm Wifi mac :" + info.getMacAddress());
-				 System.out.println("wqm return " + test());
+				System.out.println("wqm Wifi real mac :" + info.getMacAddress());
 				InjectApplication ia = (InjectApplication) getApplication();
-
 				System.out.println(ia.test());
+			}
+		});
+		
+		Button btn2 = (Button) findViewById(R.id.button2);
+		btn2.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				WifiManager wifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+				WifiInfo info = wifi.getConnectionInfo();
+				 System.out.println("wqm Wifi mac after inject:" + info.getMacAddress());
 			}
 		});
 	}
