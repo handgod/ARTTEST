@@ -19,8 +19,10 @@ static JavaVM *g_JavaVM;
 
 void init()
 {
+	ALOG("LOG","wqm hook init() begin");
 	g_bAttatedT = false;
 	g_JavaVM = android::AndroidRuntime::getJavaVM();
+	ALOG("LOG","wqm hook init() end!");
 }
 
 static JNIEnv *GetEnv()
@@ -108,7 +110,8 @@ int ClearException(JNIEnv *jenv){
 }
 
 bool isArt(){
-	return true;
+//	return true;
+	return false;//android 19 is dalvik vm.
 }
 
 static jclass findAppClass(JNIEnv *jenv,const char *apn){
@@ -178,6 +181,7 @@ static jclass findAppClass(JNIEnv *jenv,const char *apn){
 
 
 bool HookDalvikMethod(jmethodID jmethod){
+	ALOG("LOG","wqm HookDalvikMethod entry");
 	Method *method = (Method*)jmethod;
 	//关键!!将目标方法修改为native方法
 	SET_METHOD_FLAG(method, ACC_NATIVE);
@@ -192,6 +196,7 @@ bool HookDalvikMethod(jmethodID jmethod){
         method->nativeFunc = dvmResolveNativeMethod;
         method->jniArgInfo = computeJniArgInfo(&method->prototype);
     }
+    ALOG("LOG","wqm HookDalvikMethod end!");
 }
 
 bool ClassMethodHook(HookInfo info){
