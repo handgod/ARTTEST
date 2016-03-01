@@ -472,14 +472,23 @@ exit:
 }
 int main(int argc, char** argv) {
 //	char *pn = "com.example.testar";
-	char *pn = "system_server";
 	char *is = "/data/local/libso.so";
+//	char *pn = "system_server";
+	char *pn = "/system/bin/surfaceflinger";
+//	char *is = "/data/local/libTest.so";
+
 	printf("%s\n",pn);
 	printf("%s\n",is);
 	
 	pid_t target_pid;
 	target_pid = find_pid_of(pn);
 	printf("pid: %d\n",target_pid);
+	if (-1 == target_pid) {
+	  printf("Can't find the process\n");
+	   return -1;
+	}
 	int ret = inject_remote_process(target_pid, is, "InjectInterface", (void*)"I'm parameter!", strlen("I'm parameter!") );
+//	int ret = inject_remote_process(target_pid, is, "test", (void*)"I'm parameter!", strlen("I'm parameter!") );
+
 	printf("result: %d\n",ret);
 }

@@ -11,15 +11,15 @@
 
 
 extern "C" void InjectInterface(char*arg){
-	log_("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
-	log_("*-*-*-*-*-* Injected so *-*-*-*-*-*-*-*");
-	log_("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
+	log_("wqm*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
+	log_("wqm*-*-*-*-*-* Injected so *-*-*-*-*-*-*-*");
+	log_("wqm*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
 	Hook();
-	log_("*-*-*-*-*-*-*- End -*-*-*-*-*-*-*-*-*-*");
+	log_("wqm*-*-*-*-*-*-*- End -*-*-*-*-*-*-*-*-*-*");
 }
 
 extern "C" JNIEXPORT jstring JNICALL Java_com_example_testar_InjectApplication_test(JNIEnv *env, jclass clazz)
 {
-	Abort_();
+//	Abort_(); //test for art vm,remove it on android sdk api 19 ,running well.
     return env->NewStringUTF("haha ");;
 }

@@ -4,6 +4,7 @@ import java.lang.reflect.Method;
 
 import android.app.Application;
 import android.util.Log;
+import android.widget.Toast;
 
 public class InjectApplication extends Application {
 	static {

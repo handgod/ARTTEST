@@ -257,8 +257,8 @@ int Hook(){
 	HookInfo *hookInfo;
 	setup(&hookInfo);
 
-	ALOG("LOG","Target Class:%s",hookInfo[0].tClazz);
-	ALOG("LOG","Target Method:%s",hookInfo[0].tMethod);
+	ALOG("LOG","wqm Target Class:%s",hookInfo[0].tClazz);
+	ALOG("LOG","wqm Target Method:%s",hookInfo[0].tMethod);
 
 	ClassMethodHook(hookInfo[0]);
 }
