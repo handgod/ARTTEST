@@ -471,7 +471,8 @@ exit:
 	return ret;
 }
 int main(int argc, char** argv) {
-	char *pn = "com.example.testar";
+//	char *pn = "com.example.testar";
+	char *pn = "system_server";
 	char *is = "/data/local/libso.so";
 	printf("%s\n",pn);
 	printf("%s\n",is);
