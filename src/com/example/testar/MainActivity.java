@@ -42,6 +42,14 @@ public class MainActivity extends Activity {
 		btn2.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+			 System.out.println("wqm injecting.....");
+			}
+		});
+		
+		Button btn3 = (Button) findViewById(R.id.button3);
+		btn3.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				WifiManager wifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
 				WifiInfo info = wifi.getConnectionInfo();
