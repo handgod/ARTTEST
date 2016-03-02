@@ -11,7 +11,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <android/Log.h>
-
+#include "com_example_testar_MainActivity.h"
 
 
 #define ENABLE_DEBUG 0
@@ -249,7 +249,7 @@ void* get_module_base( pid_t pid, const char* module_name )
 	if ( pid < 0 )
 	{
 		/* self process */
-		snprintf( filename, sizeof(filename), "/proc/self/maps", pid );
+		snprintf( filename, sizeof(filename), "/proc/self/maps");
 	}
 	else
 	{
@@ -479,7 +479,7 @@ Java_com_example_testar_MainActivity_stringFromJNI( JNIEnv* env,
 
 	if (-1 == target_pid) {
 	 printf("Can't find the process\n");
-		return -1;
+	 return (*env)->NewStringUTF(env, "failure");
 	}
 
 	int ret = inject_remote_process(target_pid, is, "InjectInterface", (void*)"I'm parameter!", strlen("I'm parameter!") );

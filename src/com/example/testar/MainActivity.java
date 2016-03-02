@@ -43,7 +43,8 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 			 System.out.println("wqm injecting.....");
 			 ShellUtils.execCommand("su", false);
-			 System.out.println("wqm injecting:"+stringFromJNI());
+//			 System.out.println("wqm injecting:"+stringFromJNI());
+			 stringFromJNI();
 			}
 		});
 		
