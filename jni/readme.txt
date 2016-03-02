@@ -9,3 +9,5 @@
 思路分析：
 1)运行一个com.example.testar进程作为目标。
 2)通过运行inject ,将libso.so注入com.example.testar进程中，在libTest.so中修改注入的方法。
+调试native method的参考文章：
+http://blog.csdn.net/yinyhy/article/details/9858413
