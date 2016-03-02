@@ -13,7 +13,8 @@
 http://blog.csdn.net/yinyhy/article/details/9858413
 其实这个方法复杂了，现在只需两步即可：
 http://blog.csdn.net/wutianyin222/article/details/8222838
-
+或者参考：
+http://tools.android.com/recent/usingthendkplugin
 
 NDK开发方法小结：
 1)创建Android Project.
