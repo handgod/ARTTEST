@@ -23,3 +23,8 @@ NDK开发方法小结：
 4)增加头文件对应的函数，并编写Android.mk和Application.mk两个文件实现编译。
 5)在Eclipse的Builder中配置ndk-build NDK_DEBUG=1,并将AndroidManifest.xml中的Debuggabe修改为true;
 6)开始动态调试c/C++代码。
+
+
+进程安全分析：
+1)http://www.360doc.com/content/13/1215/07/9462341_337249770.shtml
+2)http://blog.163.com/yuanxiaohei@126/blog/static/6742308720122264441993/

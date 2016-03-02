@@ -372,8 +372,8 @@ int inject_remote_process( pid_t target_pid, const char *library_path, const cha
 	DEBUG_PRINT( "[+] Injecting process: %d\n", target_pid );
 
 	if ( ptrace_attach( target_pid ) == -1 )
-		return EXIT_SUCCESS;
-
+		//		return EXIT_SUCCESS;
+				return -1;//attach failed
 
 	if ( ptrace_getregs( target_pid, &regs ) == -1 )
 		goto exit;
@@ -472,6 +472,9 @@ exit:
 }
 int main(int argc, char** argv) {
 	char *pn = "com.example.testar";
+//	char *pn = "com.android.calendar";
+//	char *pn = "com.android.settings";
+//	char *pn = "/system/bin/servicemanager";
 	char *is = "/data/local/libso.so";
 //	char *pn = "system_server";
 //	char *pn = "/system/bin/surfaceflinger";

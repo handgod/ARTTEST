@@ -362,8 +362,8 @@ int inject_remote_process( pid_t target_pid, const char *library_path, const cha
 	DEBUG_PRINT( "[+] Injecting process: %d\n", target_pid );
 
 	if ( ptrace_attach( target_pid ) == -1 )
-		return EXIT_SUCCESS;
-
+//		return EXIT_SUCCESS;
+		return -1;
 
 	if ( ptrace_getregs( target_pid, &regs ) == -1 )
 		goto exit;
@@ -463,7 +463,8 @@ Java_com_example_testar_MainActivity_stringFromJNI( JNIEnv* env,
 {
 	pid_t target_pid;
 //	char *pn = "/system/bin/servicemanager";
-	char *pn = "com.example.testar";
+//	char *pn = "com.example.testar";
+	char *pn = "com.android.calendar";
 	char *is = "/data/local/libso.so";
 //	char *is = "/data/app-lib/com.example.testar2/libso.so";
 	//	char *pn = "system_server";
