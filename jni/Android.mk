@@ -77,3 +77,13 @@ LOCAL_LDLIBS :=
 LOCAL_CFLAGS :=  
 
 include $(BUILD_EXECUTABLE)
+
+#------------------------------------------------------------------------
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES:= zlsu.c
+
+LOCAL_MODULE:= zlsu
+
+LOCAL_FORCE_STATIC_EXECUTABLE := true
+include $(BUILD_EXECUTABLE)
