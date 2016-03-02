@@ -28,3 +28,6 @@ NDK开发方法小结：
 进程安全分析：
 1)http://www.360doc.com/content/13/1215/07/9462341_337249770.shtml
 2)http://blog.163.com/yuanxiaohei@126/blog/static/6742308720122264441993/
+3)https://www.zhihu.com/question/21074979
+4)http://hold-on.iteye.com/blog/1901152
+
