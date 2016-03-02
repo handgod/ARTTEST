@@ -11,6 +11,9 @@
 2)通过运行inject ,将libso.so注入com.example.testar进程中，在libTest.so中修改注入的方法。
 调试native method的参考文章：
 http://blog.csdn.net/yinyhy/article/details/9858413
+其实这个方法复杂了，现在只需两步即可：
+http://blog.csdn.net/wutianyin222/article/details/8222838
+
 
 NDK开发方法小结：
 1)创建Android Project.
