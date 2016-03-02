@@ -31,3 +31,12 @@ NDK开发方法小结：
 3)https://www.zhihu.com/question/21074979
 4)http://hold-on.iteye.com/blog/1901152
 
+
+Android ptrace简介:
+1)http://blog.csdn.net/myarrow/article/details/9617673
+
+
+ Dalvik虚拟机垃圾收集机制简要介绍和学习计划:
+1)http://blog.csdn.net/luoshengyang/article/details/41338251
+2)http://blog.csdn.net/luoshengyang/article/details/40289405
+3)http://blog.csdn.net/luoshengyang/article/details/8923485
