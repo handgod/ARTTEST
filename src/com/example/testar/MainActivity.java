@@ -1,5 +1,6 @@
 package com.example.testar;
 
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
@@ -42,7 +43,22 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 			 System.out.println("wqm injecting.....");
-			 ShellUtils.execCommand("su -c", false);
+			 
+			 String[] commands = new String[] { "chmod 777 /data/local/inject","chmod 777 /data/local/libso.so",
+					"chmod 777 /data/local/libTest.so","su -c /data/local/inject"
+					 };
+			 ShellUtils.execCommand(commands, true);
+			 
+			 String apkRoot = "chmod 777 " + getPackageCodePath();			 
+			 ShellUtils.execCommand(apkRoot, true);
+			 
+			 try {
+				Process process = Runtime.getRuntime().exec("su");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}  
+			 
 //			 System.out.println("wqm injecting:"+stringFromJNI());
 			 stringFromJNI();
 			}
