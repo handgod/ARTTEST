@@ -204,6 +204,7 @@ int ptrace_continue( pid_t pid )
 
 int ptrace_attach( pid_t pid )
 {
+	//利用PTRACE_ATTACH，使自己变成被调试程序的父进程,一个非root权限的进程是不能attach到一个root进程上的。
 	if ( ptrace( PTRACE_ATTACH, pid, NULL, 0  ) < 0 )
 	{
 		perror( "ptrace_attach" );
