@@ -11,3 +11,11 @@
 2)通过运行inject ,将libso.so注入com.example.testar进程中，在libTest.so中修改注入的方法。
 调试native method的参考文章：
 http://blog.csdn.net/yinyhy/article/details/9858413
+
+NDK开发方法小结：
+1)创建Android Project.
+2)声明各种Native 方法的名字和参数，并build apk,生成class文件，在class目录或者src目录通过javah生成jni头文件；
+3)增加native support,生成jni文件夹，并将javah生成的jni头文件拷贝到jni文件夹；
+4)增加头文件对应的函数，并编写Android.mk和Application.mk两个文件实现编译。
+5)在Eclipse的Builder中配置ndk-build NDK_DEBUG=1,并将AndroidManifest.xml中的Debuggabe修改为true;
+6)开始动态调试c/C++代码。
